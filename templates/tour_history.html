@@ -1,0 +1,28 @@
+{% extends "admin-panel.html" %}
+{% block content %}
+  <!-- Main Content -->
+
+<div class="container">
+  <div class="card text-center">
+    <h2 class="text-info my-4">All Tours</h2>
+    <br>
+    <table class="table table-stripe table-hover">
+      <tr>
+        <td colspan="4">Tour Name</td>
+        <td>Action</td>
+      </tr>
+  {% for tour in tours %}
+      <tr>
+        
+        <td colspan="4"><a href="/tour_details/{{tour._id}}">{{tour.tourname}}</a> </td>
+        <td>
+          <a href="/edit/{{tour._id}}">Edit</a> 
+          <a href="/delete/{{tour._id}}">Delete</a> 
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,51 @@
+
+{% extends "base.html" %}
+     
+{% block content %}
+
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('https://tse1.mm.bing.net/th?id=OIP.eGriMyX-nFgDpwd1-N610gHaFE&pid=Api&P=0.jpg'); background-repeat: no-repeat; background-size: cover; height: 200px; color: white;">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Login</h1>
+            <span class="subheading">Already have an account? Login </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto mt-5">
+
+        <form action="/login" method="post" name="sentMessage" id="contactForm" novalidate>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Name</label>
+              <input type="text" class="form-control" placeholder="Name" name="username" required data-validation-required-message="Please enter your name.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Password</label>
+              <input type="password" class="form-control"  name="password" required data-validation-required-message="Please enter your password">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div id="success"></div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+        <br><br><br>
+{% endblock content%}

@@ -1,0 +1,68 @@
+
+     {% extends "base.html" %}
+     
+     {% block content %}
+     <!-- best trip start -->
+      <div class="container mt-5">
+        <h3 class="text-center">Our Best Trips</h3>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+           
+                    
+                  {% for tour in tours %}
+                   
+                          <div class="col">
+                            <div class="card h-100">
+                              <img src="https://tse2.mm.bing.net/th?id=OIP.OW37kE0GSV5uKMFLRQwwlQHaEK&pid=Api&P=0.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">{{tour.tourname}}</h5>
+                                
+                                  <a href="/tour_details/{{tour._id}}" class="btn btn-success">View Details <i class="fa-solid fa-angles-right"></i></a><br><br>
+                                  <div class="d-flex justify-content-between">
+                                        <small class="text-muted"><h6><i class="fa-solid fa-calendar-days"></i> {{tour.date}}</h6></small>
+                                        <small class="text-muted"><h6><i class="fa-solid fa-user-group"></i> {{tour.seat}} </h6></small>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                    
+                  {% endfor %}
+           
+        </div>
+      </div>
+      <!-- best trip end -->
+     <!-- review start -->
+
+    
+   <div class="container pt-5 pb-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+       {% for r in reviews %}
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                   <div class="row">
+                      <div class="col-6 text-right">
+                       <img src="https://w1.pngwing.com/pngs/743/500/png-transparent-circle-silhouette-logo-user-user-profile-green-facial-expression-nose-cartoon.png" style="height: 100px !important; width: 100px !important" class="rounded-circle" alt="">
+                         </div>
+                            <p class="col-6 text-success" >
+                               <strong class="text-success">{{r.name}}</strong> <br>
+                               <span class="text-success">Traveller</span> <br> <br>
+                               <span class="text-success">{{r.place}}</span> <br> <br>
+                               <span><i class="fa-solid fa-calendar-days"></i>{{r.date}}</span> <br>
+                            </p>
+                         </div>
+                         <p>{{r.comment}}</p>
+                      </div>
+                  </div>
+             </div>
+             {% endfor %}
+          </div>                    
+    </div>
+ </div>
+   
+
+<!-- review end -->
+    <!-- content end -->
+<br><br><br>
+
+{% endblock content %}

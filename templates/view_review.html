@@ -1,0 +1,32 @@
+
+{% extends "admin-panel.html" %}
+{% block content %}
+      <!-- Main Content -->
+
+<div class="container">
+  <div class="card text-center">
+    <h2 class="text-info my-4 text-secondary">All Reviews</h2>
+    <br>
+    <table class="table table-stripe table-hover table-dark">
+    <thead>
+      <tr>
+        <td>Place</td>
+        <td>Participant Name</td>
+        <td>Comment</td>
+        <td>Date</td>
+      </tr>
+    </thead>
+    {% for r in reviews %}
+      <tr>
+        <td>{{r.place}} </td>
+        <td>{{r.name}} </td>
+        <td>{{r.comment}} </td>
+        <td>{{r.date}} </td>
+      </tr>
+    {% endfor %}
+    </table>
+  </div>
+</div>
+
+   
+{% endblock content %}   

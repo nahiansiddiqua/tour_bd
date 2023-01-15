@@ -1,0 +1,84 @@
+
+
+
+{% extends "base.html" %}
+     
+{% block content %}
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('https://tse1.mm.bing.net/th?id=OIP.eGriMyX-nFgDpwd1-N610gHaFE&pid=Api&P=0.jpg'); background-repeat: no-repeat; background-size: cover; height: 200px; color: white;">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Payment</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!-- Page Header end -->
+
+{{msg}}
+ <!-- Main Content -->
+ <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto mt-5">
+
+        <form action="/payment/{{id}}" method="post" name="sentMessage" id="contactForm" novalidate>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <h2 class="">{{tourname}} Tour</h2>
+              <label>Participant Name</label>
+              <input type="text" class="form-control" placeholder="Name" name="username" required data-validation-required-message="Please enter your name.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Email Address</label>
+              <input type="email" class="form-control" placeholder="Email Address" name="email" required data-validation-required-message="Please enter your email address.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Phone Number</label>
+              <input type="number" class="form-control"  name="phone" required data-validation-required-message="Please enter your password">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Pay Amount</label>
+              <input type="number" class="form-control"  name="amount" required data-validation-required-message="Please enter your password">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label> Transaction ID</label>
+              <input type="text" class="form-control"  name="transaction_id" required data-validation-required-message="Please confirm your password">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>T-Shirt Size:</label>
+              <input type="number" class="form-control"  name="t_size" required data-validation-required-message="Please confirm your password">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div id="success"></div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+        <br><br><br>
+
+
+{% endblock content %}

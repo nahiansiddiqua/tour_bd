@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+     
+{% block content %}
+
+{{msg}}
+<div class="container">
+   <div class="row">
+     <div class="col-lg-8 col-md-10 mx-auto mt-5">
+
+
+      <div class="card text-center">
+        <div class="card-header">
+          Feel free to leave feedback
+        </div>
+        <div class="card-body">
+          
+       <form class="form-floating" action="/review" method="post" name="sentMessage" id="contactForm" novalidate>
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls">
+            <input type="text" class="form-control" placeholder="Name" name="name" required data-validation-required-message="Please enter your name.">
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+        <div class="control-group">
+           <div class="form-group floating-label form-group controls">
+             <input type="text" class="form-control"  name="place" required data-validation-required-message="Please enter your password" placeholder="Place">
+             <p class="help-block text-danger"></p>
+           </div>
+         </div>
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls">
+            <input type="date" class="form-control"  name="date" required data-validation-required-message="Please enter your password" placeholder="Enter date">
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+        <div class="control-group">
+           <div class="form-group floating-label-form-group controls">
+             <input type="text" class="form-control"  name="comment" required data-validation-required-message="Please enter your password" placeholder="Comment">
+             <p class="help-block text-danger"></p>
+           </div>
+         </div>
+        <div id="success"></div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
+        </div>
+      </form>
+        </div>
+      </div>
+
+     </div>
+   </div>
+ </div>
+       <br><br><br>
+       <br><br><br>
+
+    <!-- review start -->
+
+    
+   <div class="container pt-5 pb-5">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+         {% for r in reviews %}
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-body">
+                     <div class="row">
+                        <div class="col-6 text-right">
+                         <img src="https://w1.pngwing.com/pngs/743/500/png-transparent-circle-silhouette-logo-user-user-profile-green-facial-expression-nose-cartoon.png" style="height: 100px !important; width: 100px !important" class="rounded-circle" alt="">
+                           </div>
+                              <p class="col-6 text-success" >
+                                 <strong class="text-success">{{r.name}}</strong> <br>
+                                 <span class="text-success">Traveller</span> <br> <br>
+                                 <span class="text-success">{{r.place}}</span> <br> <br>
+                                 <span><i class="fa-solid fa-calendar-days"></i>{{r.date}}</span> <br>
+                              </p>
+                           </div>
+                           <p>{{r.comment}}</p>
+                        </div>
+                    </div>
+               </div>
+               {% endfor %}
+            </div>                    
+      </div>
+   </div>
+     
+
+ <!-- review end -->
+<br><br><br>
+  {% endblock content %}

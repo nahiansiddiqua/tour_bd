@@ -1,0 +1,541 @@
+{% extends "base.html" %}
+     
+     {% block content %}
+    
+    <!-- details start -->
+    <div class="container">
+        <section>
+            <div class="row">
+            <div class="col-md-2 text-center">
+                <div class="w-80 border p-2 m-1" style="border-color: rgba(13, 173, 117, 0.641) !important; border-radius: 5px">
+                    <div class="row">
+                        <div class="col-4">
+                        <i class="fa-solid fa-calendar-days text-success" style="font-size: 50px"></i>
+                        </div>
+                        <div class="col-8">
+                        <b class="text-success">Trip Start</b> <br>
+                        {{date}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-2 text-center">
+                <div class="w-80 border p-2 m-1" style="border-color: rgba(13, 173, 117, 0.641) !important; border-radius: 5px">
+                    <div class="row">
+                        <div class="col-4">
+                        <i class="fas fa-clock  text-success" style="font-size: 50px"></i> 
+                        </div>
+                        <div class="col-8">
+                        <b class="text-success">Trip Duration</b> <br> 4 Days
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-2 text-center">
+                <div class="w-80 border p-2 m-1" style="border-color: rgba(13, 173, 117, 0.641) !important; border-radius: 5px">
+                    <div class="row">
+                        <div class="col-4">
+                        <i class="fa-solid fa-people-group text-success" style="font-size: 50px"></i>
+                        </div>
+                        <div class="col-8">
+                        <b class="text-success">Group Size</b> <br>
+                        14 Person
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        
+            <div class="col-md-2 text-center">
+                <div class="w-80 border p-2 m-1" style="border-color: rgba(13, 173, 117, 0.641) !important; border-radius: 5px">
+                    <div class="row">
+                        <div class="col-4">
+                        <i class="fa-solid fa-map-location-dot text-success" aria-hidden="true" style="font-size: 50px"></i>
+                        </div>
+                        <div class="col-8">
+                        <b class="text-success">Destination</b> <br>
+                        {{tourname}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-2 text-center">
+                <div class="w-80 border p-2 m-1" style="border-color: rgba(13, 173, 117, 0.641) !important; border-radius: 5px">
+                    <div class="row">
+                        <div class="col-4">
+                        <i class="fa-solid fa-location-dot text-success" style="font-size: 50px"></i>
+                        </div>
+                        <div class="col-8">
+                        <b class="text-success">Arrival From</b> <br>
+                        Dhaka 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-2 text-center">
+                <div class="w-80 border p-2 m-1" style="border-color: rgba(13, 173, 117, 0.641) !important; border-radius: 5px">
+                    <div class="row">
+                        <div class="col-4">
+                        <i class="fa-solid fa-bus text-success" aria-hidden="true" style="font-size: 50px"></i>
+                        </div>
+                        <div class="col-8">
+                        <b class="text-success">Transport</b> <br>
+                        Non-Ac Bus 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            </div>
+        </section>
+    </div>
+    <!-- details end -->
+
+
+    <!-- description start -->
+    <div class="container py-4 ">
+        <div class="row">
+            <div class="col">
+                <div class="blog-posts">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <article class="post post-medium border p-4 mb-5 ">
+                                <div class="post-image">
+                                    <div class="owl-carousel owl-theme nav-inside nav-inside-edge nav-squared nav-with-transparency nav-dark mt-3 owl-loaded owl-drag owl-carousel-init"
+                                        data-plugin-options="{'items': 1, 'margin': 10, 'loop': false, 'nav': true, 'dots': false}"
+                                        style="height: auto;">
+    
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage"
+                                                style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s;">
+                                                <div class="owl-item active" style="margin-right: 10px;">
+                                                    <div>
+                                                        <div class="card">
+                                                            <img class="img-fluid"
+                                                                src="https://tourgroupbd.com/upload/event/1656398187_event.jpg">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-dots disabled"></div>
+                                    </div>
+                                </div>
+                                <div class="post-content">
+                                    <h2
+                                        class="font-weight-semibold text-5 line-height-6 mt-3 mb-2 bg-info text-light text-center">
+                                        {{tourname}} Trip {{date}}</h2>
+    
+                                    <div class="row" style="border:1px solid #09b364; border-radius: 10px">
+    
+    
+                                        <div class="col-lg-4 text-center mt-2">
+                                            <i class="fa-solid fa-location-dot  text-success" style="font-size: 50px"></i>
+                                            <h5>Arrival On</h5>
+                                            Dhaka
+                                        </div>
+                                        <div class="col-lg-4 text-center mt-2">
+                                            <i class="fa-solid fa-map-location-dot text-success" aria-hidden="true"
+                                                style="font-size: 50px"></i>
+                                            <h5>Destination</h5>
+                                            {{tourname}}
+                                        </div>
+    
+                                        <div class="col-lg-4 text-center mt-2">
+    
+                                            <i class="fa fa-bed text-success" aria-hidden="true"
+                                                style="font-size: 50px"></i>
+    
+                                            <h5>Accomodation</h5>
+    
+                                            Local Cottage
+                                        </div>
+                                    </div>
+                                    <p class="mt-5"></p>
+                                    <p>
+                                        <font color="#000000" face="Lora-Medium"><span style="font-size: 16px;"><i>
+                                            {{cardtext}}
+                                        </i></span></font>
+                                    </p>
+                                    <br>
+                                </div>
+                                <!-- hide option start -->
+    
+                                <div class="row">
+                                    <div class="col-md-6">
+                                                    <div class="tab-pane tab-pane-navigation" id="tabsPackage">
+                                                            <h4 class="text-info text-center">Package</h4>
+                                                            <p></p>
+                                                            <p><span
+                                                                    style="color: rgb(8, 82, 148); font-size: 18px; font-weight: 700;">Package
+                                                                    Price </span></p>
+                                                            <ul>
+                                                                <li><span style="font-size: 0.88rem; font-weight: 700;">{{price}} BDT Per
+                                                                        Person&nbsp;</span></li>
+                                                            </ul>
+                                                            <p><br></p>
+                                                            <p>
+                                                                <font color="#ff0000">***Thinks you must Carry</font>
+                                                            </p>
+                                                            <ul>
+                                                                <li>NID 3 Photocopy</li>
+                                                                <li>Powerbank</li>
+                                                                <li>Trekking Sandel</li>
+                                                                <li>&nbsp;For Rainy Season Umbrella or&nbsp;&nbsp;Rain Cover ( For
+                                                                    Body, Mobile, Camera or
+                                                                    Travel Bag)</li>
+                                                            </ul>
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                        <div class="tab-pane tab-pane-navigation" id="tabsPayment">
+                                                            <h4 class="text-info text-center"> Payment Method</h4>
+            
+                                                            <p></p>
+                                                            <p class="MsoNormal"
+                                                                style="margin-right: 0px; margin-bottom: 20px; margin-left: 0px; color: rgb(119, 119, 119); line-height: 26px; font-family: poppins, Arial, sans-serif; font-size: 14px;">
+                                                                <span style="font-size: 10.5pt; line-height: 14.98px; font-family: " Arial Black"; background-image: initial;
+                                                                    background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial;
+                                                                    background-origin: initial; background-clip: initial;">
+                                                                    <span style="font-weight: bolder;">
+                                                                        <font color="#085294">Bank</font>
+                                                                    </span>
+                                                                </span>
+                                                                    <span style="font-size: 10.5pt; line-height: 14.98px; font-family: " Segoe UI Historic", sans-serif; background-image:
+                                                                        initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment:
+                                                                        initial; background-origin: initial; background-clip: initial;"><span style="font-weight: bolder;"><span
+                                                                                style="font-family: " Arial Black";">
+                                                                                <font color="#085294">&nbsp;Payment</font>
+                                                                            </span></span>
+                                                                        <font color="#050505">
+                                                                            <o:p></o:p>
+                                                                        </font>
+                                                                    </span>
+                                                            </p>
+                                                            <p class="MsoNormal"
+                                                                style="margin-right: 0px; margin-bottom: 20px; margin-left: 0px; color: rgb(119, 119, 119); line-height: 26px; font-family: poppins, Arial, sans-serif; font-size: 14px;">
+                                                                <span style="font-size: 10.5pt; line-height: 14.98px; font-family: "
+                                                                    Segoe UI Historic", sans-serif; color: rgb(5, 5, 5);
+                                                                    background-image: initial; background-position: initial;
+                                                                    background-size: initial; background-repeat: initial;
+                                                                    background-attachment: initial; background-origin: initial;
+                                                                    background-clip: initial;">AC Name:&nbsp;<span
+                                                                        style="font-weight: bolder;">Tour BD</span></span><span
+                                                                    style="font-size: 10.5pt; line-height: 14.98px; font-family: "
+                                                                    Segoe UI Historic", sans-serif; color: rgb(5, 5, 5);"><br
+                                                                        style="animation-name: none !important; transition-property: none !important;"><span
+                                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">AC
+                                                                        No.<span
+                                                                            style="font-weight: bolder;">4110340026598</span><br><span
+                                                                            style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Dutch
+                                                                            ABC Bank Ltd (C Branch)</span><br
+                                                                            style="animation-name: none !important; transition-property: none !important;"><span
+                                                                            style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Routing
+                                                                            Number: 0390263136<o:p></o:p></span></span></span>
+                                                            </p>
+                                                            <p class="MsoNormal"
+                                                                style="margin-right: 0px; margin-bottom: 20px; margin-left: 0px; color: rgb(119, 119, 119); line-height: 26px; font-family: poppins, Arial, sans-serif; font-size: 14px;">
+                                                                <span style="font-size: 10.5pt; line-height: 14.98px; font-family: "
+                                                                    Segoe UI Historic", sans-serif;"><span
+                                                                        style="font-weight: bolder;">
+                                                                        <font color="#085294"><span style="font-family: " Arial
+                                                                                Black";">Mobile Payment</span>
+                                                                        </font>
+                                                                    </span>
+                                                                    <font color="#050505">
+                                                                        <o:p></o:p>
+                                                                    </font>
+                                                                </span>
+                                                            </p>
+                                                            <p class="MsoNormal"
+                                                                style="margin-right: 0px; margin-bottom: 20px; margin-left: 0px; color: rgb(119, 119, 119); line-height: 26px; font-family: poppins, Arial, sans-serif; font-size: 14px;">
+                                                                <span style="font-size: 10.5pt; line-height: 14.98px; font-family: "
+                                                                    Segoe UI Historic", sans-serif; color: rgb(5, 5, 5);">Bkash
+                                                                    Marchant:&nbsp;<span
+                                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span
+                                                                            style="font-weight: bolder;"><a href="tel:01840238946"
+                                                                                style="color: rgb(0, 173, 210); outline: none !important;">2998340246&nbsp;</a></span>(Bkash
+                                                                        Payment with Cash out Charge)<o:p></o:p></span></span>
+                                                            </p>
+                                                            <p class="MsoNormal"
+                                                                style="margin-right: 0px; margin-bottom: 20px; margin-left: 0px; color: rgb(119, 119, 119); line-height: 26px; font-family: poppins, Arial, sans-serif; font-size: 14px;">
+                                                                <span style="font-size: 10.5pt; line-height: 14.98px; font-family: "
+                                                                    Segoe UI Historic", sans-serif; color: rgb(5, 5, 5);">Bkash
+                                                                    Personal:&nbsp;<span
+                                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span
+                                                                            style="font-weight: bolder;">86976894855,
+                                                                            03456892851</span>&nbsp;(Send Money with
+                                                                        Cash out Charge)<o:p></o:p></span></span>
+                                                            </p>
+                                                            <p class="MsoNormal"
+                                                                style="margin-right: 0px; margin-bottom: 20px; margin-left: 0px; color: rgb(119, 119, 119); line-height: 26px; font-family: poppins, Arial, sans-serif; font-size: 14px;">
+                                                                <span style="font-size: 10.5pt; line-height: 14.98px; font-family: "
+                                                                    Segoe UI Historic", sans-serif; color: rgb(5, 5, 5);
+                                                                    background-image: initial; background-position: initial;
+                                                                    background-size: initial; background-repeat: initial;
+                                                                    background-attachment: initial; background-origin: initial;
+                                                                    background-clip: initial;">For others payment option call our
+                                                                    Manager&nbsp;<span
+                                                                        style="font-weight: bolder;">+8801840238946</span>
+                                                                    <o:p></o:p>
+                                                                </span>
+                                                            </p>
+                                                            <p class="MsoNormal"
+                                                                style="margin-right: 0px; margin-bottom: 20px; margin-left: 0px; color: rgb(119, 119, 119); line-height: 26px; font-family: poppins, Arial, sans-serif; font-size: 14px;">
+                                                                <span style="font-size: 10.5pt; line-height: 14.98px; font-family: "
+                                                                    Segoe UI Historic", sans-serif; color: rgb(5, 5,
+                                                                    5);"><br></span><span
+                                                                    style="font-size: 10.5pt; line-height: 14.98px; font-family: "
+                                                                    Nirmala UI", sans-serif; color: rgb(5, 5, 5); background-image:
+                                                                    initial; background-position: initial; background-size: initial;
+                                                                    background-repeat: initial; background-attachment: initial;
+                                                                    background-origin: initial; background-clip: initial;">Before
+                                                                    Payment Please Call and
+                                                                    Confirm Seat Then Pay Booking Money<o:p></o:p></span>
+                                                            </p>
+                                                            <p class="MsoNormal"
+                                                                style="margin-right: 0px; margin-bottom: 20px; margin-left: 0px; color: rgb(119, 119, 119); line-height: 26px; font-family: poppins, Arial, sans-serif; font-size: 14px;">
+                                                                <span style="font-size: 10.5pt; line-height: 14.98px; font-family: "
+                                                                    Nirmala UI", sans-serif; color: rgb(5, 5, 5); background-image:
+                                                                    initial; background-position: initial; background-size: initial;
+                                                                    background-repeat: initial; background-attachment: initial;
+                                                                    background-origin: initial; background-clip: initial;">After
+                                                                    Payment Please Fill Information
+                                                                    and Send&nbsp;</span><span
+                                                                    style="font-size: 10.5pt; line-height: 14.98px; font-family: "
+                                                                    Segoe UI Historic", sans-serif; color: rgb(5, 5, 5);
+                                                                    background-image: initial; background-position: initial;
+                                                                    background-size: initial; background-repeat: initial;
+                                                                    background-attachment: initial; background-origin: initial;
+                                                                    background-clip: initial;">Manager Number<o:p></o:p></span>
+                                                            </p>
+                                                            <p >Participant Name </p>
+                                                            <p >Mobile Number:</p>
+                                                            <p >Pay Amount:</p>
+                                                            <p >T Shirt Size:</p>
+                                                            <p >Pay Ac Number or Bkash:</p>
+                                                            <p >Fill This and Send Manager or Bkash number.</p>
+                                                            <p></p>
+                                                        </div>
+                                                                <a href="/payment/{{id}}" class="btn btn-success "><b> Payment Now</b></a>
+                                                        </div>
+                                                    <br><br><br>
+                                                    <!-- hide option end -->
+                                                </article>
+                                </div>
+                                <div class="col-md-6 appear-animation animated fadeInLeftShorter appear-animation-visible"
+                                    data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300"
+                                    style="animation-delay: 300ms;">
+
+                                    
+
+                                    <article class="post post-medium border p-4 mb-5 "> 
+                                        <h5 class="bg-dark text-light p-2 text-center"> Share In Social Media </h5>
+                                        <a href="#" class="m-1 btn btn-xs btn-info text-1 text-uppercase"> <i class="fab fa-facebook"></i> Share </a>
+            
+                                        <a href="#" class="m-1 btn btn-xs btn-primary text-1 text-uppercase"> <i class="fab fa-twitter"></i> Tweet </a>
+            
+                                        <a href="#" class="m-1 btn btn-xs btn-success text-1 text-uppercase"> <i class="fab fa-whatsapp"></i> Send </a>
+            
+                                        <a href="#" class="m-1 btn btn-xs btn-dark text-1 text-uppercase"> <i class="fab fa-linkedin"></i> Share </a>
+                                    </article>
+            
+                                </div>
+
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- description end -->
+
+
+    <div class="container">
+        <h5 class="font-weight-normal mb-5 bg-info p-3 text-light text-center" style="border-radius: 5px">Upcomming <strong class="font-weight-extra-bold">Other Trips </strong> </h5>
+    </div>
+
+          <!-- best trip with owl carousel start -->
+          <div class="container mt-5 mb-5">
+            <h3 class="text-center">Our Latest Trips</h3>
+        
+            <div class="mt-3">
+              <div class="owl-carousel owl-theme">
+                <div class='item'>
+                  <div class="card h-100">
+                    <img src="images/sajek.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Sajek Tour</h5>
+                      <p class="card-text">TDesignation</p>
+                    
+                        <a href="#" class="btn btn-success">View Details <i class="fa-solid fa-angles-right"></i></a><br><br>
+                        <div class="d-flex justify-content-between">
+                            <small class="text-muted"><h6><i class="fa-solid fa-calendar-days"></i> Start 20  April, 2021</h6></small>
+                        <small class="text-muted"><h6><i class="fa-solid fa-user-group"></i> 60 seats</h6></small>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='item'>
+                  <div class="card h-100">
+                    <img src="images/sajek.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Sajek Tour</h5>
+                      <p class="card-text">TDesignation</p>
+                    
+                        <a href="#" class="btn btn-success">View Details <i class="fa-solid fa-angles-right"></i></a><br><br>
+                        <div class="d-flex justify-content-between">
+                            <small class="text-muted"><h6><i class="fa-solid fa-calendar-days"></i> Start 20  April, 2021</h6></small>
+                        <small class="text-muted"><h6><i class="fa-solid fa-user-group"></i> 60 seats</h6></small>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='item'>
+                  <div class="card h-100">
+                    <img src="images/sajek.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Sajek Tour</h5>
+                      <p class="card-text">TDesignation</p>
+                    
+                        <a href="#" class="btn btn-success">View Details <i class="fa-solid fa-angles-right"></i></a><br><br>
+                        <div class="d-flex justify-content-between">
+                            <small class="text-muted"><h6><i class="fa-solid fa-calendar-days"></i> Start 20  April, 2021</h6></small>
+                        <small class="text-muted"><h6><i class="fa-solid fa-user-group"></i> 60 seats</h6></small>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='item'>
+                  <div class="card h-100">
+                    <img src="images/sajek.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Sajek Tour</h5>
+                      <p class="card-text">TDesignation</p>
+                    
+                        <a href="#" class="btn btn-success">View Details <i class="fa-solid fa-angles-right"></i></a><br><br>
+                        <div class="d-flex justify-content-between">
+                            <small class="text-muted"><h6><i class="fa-solid fa-calendar-days"></i> Start 20  April, 2021</h6></small>
+                        <small class="text-muted"><h6><i class="fa-solid fa-user-group"></i> 60 seats</h6></small>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='item'>
+                  <div class="card h-100">
+                    <img src="images/sajek.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Sajek Tour</h5>
+                      <p class="card-text">TDesignation</p>
+                    
+                        <a href="#" class="btn btn-success">View Details <i class="fa-solid fa-angles-right"></i></a><br><br>
+                        <div class="d-flex justify-content-between">
+                            <small class="text-muted"><h6><i class="fa-solid fa-calendar-days"></i> Start 20  April, 2021</h6></small>
+                        <small class="text-muted"><h6><i class="fa-solid fa-user-group"></i> 60 seats</h6></small>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='item'>
+                  <div class="card h-100">
+                    <img src="images/sajek.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Sajek Tour</h5>
+                      <p class="card-text">TDesignation</p>
+                    
+                        <a href="#" class="btn btn-success">View Details <i class="fa-solid fa-angles-right"></i></a><br><br>
+                        <div class="d-flex justify-content-between">
+                            <small class="text-muted"><h6><i class="fa-solid fa-calendar-days"></i> Start 20  April, 2021</h6></small>
+                        <small class="text-muted"><h6><i class="fa-solid fa-user-group"></i> 60 seats</h6></small>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- best trip with owl carousel end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <!-- footer start -->
+    <div class="bg-dark pt-3 pb-3">
+        <div class="container">
+            <div class="social text-center text-light">
+                <h3><a class="text-decoration-none" href="#"><i class="fa-brands fa-facebook ps-3 pe-3"></i></a>
+                    <a class="text-decoration-none" href="#"><i class="fa-brands fa-twitter ps-3 pe-3"></i></a>
+                    <a class="text-decoration-none" href="#"><i class="fa-brands fa-linkedin ps-3 pe-3"></i></a>
+                    <a class="text-decoration-none" href="#"><i class="fa-brands fa-square-instagram ps-3 pe-3"></i></a>
+                    <a class="text-decoration-none" href="#"><i class="fa-brands fa-square-whatsapp ps-3 pe-3"></i></a>
+                </h3>
+                <small>2022 <i class="fa-regular fa-copyright"></i><b> Tour BD </b>- Copyright. All Rights Reserved</small><br>
+                <small>Developed By Team</small>
+            </div>
+        </div>
+    </div>
+    <!-- footer end -->
+
+
+
+
+    <!-- script start -->
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fedd93fc11.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- script end -->
+
+     <!-- owl carousel js start -->
+    <script>
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+          loop: true,
+          nav: false,
+          autoplay: true,
+          autoplayTimeout: 2000,
+          margin: 10,
+          responsive: {
+              0: {
+                  items: 1
+              },
+              600: {
+                  items: 3
+              },
+              960: {
+                  items: 4
+              },
+              1200: {
+                  items: 4
+              }
+          }
+      });
+      owl.on('mousewheel', '.owl-stage', function (e) {
+          if (e.deltaY > 0) {
+              owl.trigger('next.owl');
+          } else {
+              owl.trigger('prev.owl');
+          }
+          e.preventDefault();
+      });
+    </script>
+    <!-- owl carousel js end -->
+   
+ {% endblock content %}
