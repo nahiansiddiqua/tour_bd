@@ -7,7 +7,8 @@
 * Tour Packages: Add, view, update, and delete tour packages. <br>
 * Booking Management: Manage bookings, including status updates and cancellations. <br>
 * Search Functionality: Users can search for tours by destination, duration, or price range. <br>
-* Responsive Design: Works seamlessly across different devices and screen sizes. <br>
+* Responsive Design: Works seamlessly across different devices and screen sizes.
+  
 **Technologies Used** <br>
 * Backend: Python Flask <br>
 * Database: MongoDB <br>
